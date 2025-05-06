@@ -12,7 +12,7 @@ import Dashboard from './components/Dashboard';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename="/frontEndMM">
+    <BrowserRouter basename="/projectM">
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/SignIn" element={<SignIn />}/>
