@@ -10,6 +10,8 @@ import Typography from '@mui/material/Typography';
 import { SparkLineChart } from '@mui/x-charts/SparkLineChart';
 import { areaElementClasses } from '@mui/x-charts/LineChart';
 
+import { currencyFormatter } from '../../../services/formatters';
+
 function AreaGradient({ color, id }) {
   return (
     <defs>
@@ -52,7 +54,6 @@ function StatCard({ title, value, interval, trendVar, trend, data, dates }) {
 
   const color = labelColors[trend];
   const chartColor = trendColors[trend];
-  const currencyFormatter = (value) => value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
   return (
     <Card variant="outlined" sx={{ height: '100%', flexGrow: 1 }}>

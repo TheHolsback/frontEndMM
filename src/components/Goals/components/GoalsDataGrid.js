@@ -8,8 +8,9 @@ import { Box, Button,Chip, Dialog, DialogTitle, DialogContent, DialogContentText
 import DeleteOutlineRoundedIcon from '@mui/icons-material/DeleteOutlineRounded';
 import DoneRoundedIcon from '@mui/icons-material/DoneRounded';
 
+import { currencyFormatter } from '../../../services/formatters';
+
 function SparklineCell(params) {
-  const currencyFormatter = (value) => value?value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }):'';
   const { value, colDef } = params;
 
   const theme = useTheme();

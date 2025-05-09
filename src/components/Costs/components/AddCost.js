@@ -324,11 +324,15 @@ const Formulario = () => {
                     <div key={item.id}>
                       {(() => {
                         switch (item.label) {
+                          case 'Duração*':
+                            return (
+                                <DuracaoDetail item={item} handleInputChange={handleInputChange} handleCheckboxChange={handleCheckboxChange}/>
+                            );
                           case 'Duração':
                             return (
                                 <DuracaoDetail item={item} handleInputChange={handleInputChange} handleCheckboxChange={handleCheckboxChange}/>
                             );
-                          case 'Forma de Pagamento':
+                          case 'Forma de Pagamento*':
                             return (
                               <SelectUser item={item} handleInputChange={handleInputChange} opcoes={formasPagamentos} />
                             );

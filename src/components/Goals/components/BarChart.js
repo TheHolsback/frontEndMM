@@ -32,14 +32,14 @@ export default function GoalsBarChart() {
       id: 'acumulado',
       label: 'Acumulado',
       data: Object.keys(data).map(key => data[key][0].Acumulado),
-      valueFormatter:(value) => value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }),
+      valueFormatter:(value) => value?value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }):'0',
       stack: 'A',
     },
     {
       id: 'restante',
       label: 'Restante',
       data: Object.keys(data).map(key => data[key][0].Restante),
-      valueFormatter:(value) => value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }),
+      valueFormatter:(value) => value?value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }):'0',
       stack: 'A',
     },
   ];

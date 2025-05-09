@@ -10,6 +10,8 @@ import { LineChart } from '@mui/x-charts/LineChart';
 import { accessAuthApi } from '../../../services/authService';
 import { useParams } from 'react-router-dom';
 
+import { currencyFormatter } from '../../../services/formatters';
+
 function AreaGradient({ color, id }) {
   return (
     <defs>
@@ -100,7 +102,6 @@ export default function EvolucaoChart() {
 
   // const chipColor = media<0 ? 'error' : media>0 ? 'success' : 'warning';
 
-  const currencyFormatter = (value) => value?value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }):'';
   return (
     <Card variant="outlined" sx={{ width: '100%' }}>
       <CardContent>

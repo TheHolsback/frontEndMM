@@ -7,11 +7,11 @@ import { useTheme } from '@mui/material/styles';
 import { Box, Button, Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions } from '@mui/material';
 import DeleteOutlineRoundedIcon from '@mui/icons-material/DeleteOutlineRounded';
 
+import { currencyFormatter } from '../../../services/formatters';
+
 import { useParams } from 'react-router-dom';
 
 function SparklineCell(params) {
-  const currencyFormatter = (value) => value?value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }):'';
-  
   const { value, colDef } = params;
 
   const theme = useTheme();

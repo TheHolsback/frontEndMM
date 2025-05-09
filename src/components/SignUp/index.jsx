@@ -118,10 +118,10 @@ export default function SignUp(props) {
       return;
     }
     const data = new FormData(event.currentTarget);
-    Axios.post(process.env.REACT_APP_API_S+"/register",{
-      name: data.get('name'),
+    Axios.post(process.env.REACT_APP_API_S+"/api/register",{
+      nome: data.get('name'),
       email: data.get('email'),
-      password: data.get('password'),
+      senha: data.get('password'),
     }).then((response) => {
       if (response.data.message === "Cadastrado com sucesso") {
         setDialogMessage("Cadastro realizado com sucesso! Você foi cadastrado com sucesso! Agora você pode entrar na sua conta.");
